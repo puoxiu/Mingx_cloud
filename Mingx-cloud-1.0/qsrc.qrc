@@ -1,0 +1,32 @@
+<RCC>
+    <qresource prefix="/new/prefix1"/>
+    <qresource prefix="/">
+        <file>images/add.png</file>
+        <file>images/ashbin.png</file>
+        <file>images/bottom.png</file>
+        <file>images/close.png</file>
+        <file>images/direction-up.png</file>
+        <file>images/elipsis.png</file>
+        <file>images/favorite-filling.png</file>
+        <file>images/file.png</file>
+        <file>images/hide.png</file>
+        <file>images/link.png</file>
+        <file>images/Logo1.png</file>
+        <file>images/menu.png</file>
+        <file>images/minus.png</file>
+        <file>images/select.png</file>
+        <file>images/setting-filling.png</file>
+        <file>images/beijing.png</file>
+        <file>images/beijing2.png</file>
+        <file>images/beijing3.png</file>
+        <file>images/tittleMainwindow.png</file>
+        <file>images/fullScream.png</file>
+        <file>images/exitFull.png</file>
+        <file>images/sharedList.png</file>
+        <file>images/myFiles.png</file>
+        <file>images/headerImage.png</file>
+        <file>images/changeUser.png</file>
+        <file>images/downloadList.png</file>
+        <file>images/transformList.png</file>
+    </qresource>
+</RCC>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>971</width>
+    <height>545</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="TittleMainwindow" name="tittle_mainWin_wg" native="true"/>
+    </item>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+      <widget class="MyFileWg" name="myFile_page"/>
+      <widget class="ShareList" name="sharedList_page"/>
+      <widget class="RankingList" name="ranking_page"/>
+      <widget class="Transfer" name="transformList_page"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>TittleMainwindow</class>
+   <extends>QWidget</extends>
+   <header location="global">tittleMainwindow.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>MyFileWg</class>
+   <extends>QWidget</extends>
+   <header location="global">myfilewg.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>ShareList</class>
+   <extends>QWidget</extends>
+   <header>sharelist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>RankingList</class>
+   <extends>QWidget</extends>
+   <header location="global">rankinglist.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Transfer</class>
+   <extends>QWidget</extends>
+   <header location="global">transfer.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
