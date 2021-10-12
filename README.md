@@ -1,2 +1,33 @@
 # Mingx_cloud
-This is my cloud disk. Its name is "I think so I am". It's too long. Let's call it dog-egg!
+
+-------------------
+功能：
+实现私有云盘功能，用户可在客户端和浏览器自由上传和下载本机文件（由于资源有限，文件不可超过50MB，可修改）。
+
+-------------------
+本项目使用到的开源技术：
+Nginx
+fastDFS
+Qt
+Redis
+fastCGI
+
+-------------------
+注：
+1、项目必须在Qt环境中重新编译后，把配置文件夹conf放到生成可执行程序同级目录下才可正常运行。
+2、正常使用必须搭建Nginx服务器，相关技术或者协议如下：
+  服务端：
+    分布式文件存储系统：
+        使用fastDFS开源项目搭建（目前仅支持类UNIX平台的部署），使用c语言实现；
+        特点：无单点故障；高吞吐量。
+    Redis缓存数据库：
+        存储用户经常下载的文件，并当前正在连接的所有客户端随机生成的校验码，用于校验和识别。
+    MySQL数据库：
+        记录注册用户信息，并且将fastDFS上传生成的文件id与用户信息相关联。
+    Redis与MySQL交互流程：
+        a.mysql共享文件数量和redis共享文件数量对比，判断是否相等
+        b.如果不相等，清空redis数据，重新从mysql中导入数据到redis (mysql和redis交互)
+        c.从redis读取数据，保存json格式，打印。
+    Nginx服务器+fastCGI：
+        提供反向代理、负载均衡服务。开源项目fastCGI作为cgi系统，进行来自客户端的相关逻辑处理。
+  客户端与服务端的交互，在应用层上是基于HTTP协议的。
